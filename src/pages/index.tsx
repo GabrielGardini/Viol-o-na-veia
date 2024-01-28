@@ -2,10 +2,21 @@ import Head from "next/head";
 import Image from "next/image";
 import { Inter } from "next/font/google";
 import styles from "@/styles/Home.module.css";
+import Header from "./components/header";
+import Introduction from "./components/introduction";
+import GuitarTypes from "./components/guitartypes";
+import TwoInstruments from "./components/twoinstrument";
+import Understanding from "./components/understanding";
+import Chords from "./components/chords";
+import AllChords from "./components/allchords";
+import { Box, useMediaQuery } from "@mui/material";
+import { use } from "react";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
+  const matches = useMediaQuery("(min-width:1900px)");
+
   return (
     <>
       <Head>
@@ -14,101 +25,178 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className={`${styles.main} ${inter.className}`}>
-        <div className={styles.description}>
-          <p>
-            Get started by editing&nbsp;
-            <code className={styles.code}>src/pages/index.tsx</code>
-          </p>
-          <div>
-            <a
-              href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
+      <Box sx={{ bgcolor: "white" }}>
+        <Header />
+        <Box
+          sx={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            flexDirection: "column",
+          }}
+        >
+          <Box
+            sx={{
+              width: matches ? "70%" : "90%",
+              mt: matches ? 20 : 14,
+            }}
+          >
+            <Introduction />
+          </Box>
+          <Box
+            sx={{
+              width: "100vw",
+              backgroundColor: "#5A413D",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
+            <img
+              src={"/vamoscomecar.svg"}
+              width={"80%"}
+              // height={"100vh"}
+              alt={"vamos começar"}
+            />
+          </Box>
+          <Box
+            sx={{
+              width: matches ? "70%" : "90%",
+              mt: matches ? 20 : 14,
+            }}
+          >
+            <GuitarTypes />
+          </Box>
+          <Box
+            sx={{
+              width: "100vw",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              mt: 10,
+              backgroundColor: "#5A413D",
+            }}
+          >
+            <Box
+              sx={{
+                width: matches ? "70%" : "90%",
+
+                backgroundColor: "#5A413D",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
             >
-              By{" "}
-              <Image
-                src="/vercel.svg"
-                alt="Vercel Logo"
-                className={styles.vercelLogo}
-                width={100}
-                height={24}
-                priority
-              />
-            </a>
-          </div>
-        </div>
-
-        <div className={styles.center}>
-          <Image
-            className={styles.logo}
-            src="/next.svg"
-            alt="Next.js Logo"
-            width={180}
-            height={37}
-            priority
-          />
-        </div>
-
-        <div className={styles.grid}>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
+              <TwoInstruments />
+            </Box>
+          </Box>
+          <Box
+            sx={{
+              width: "100vw",
+              backgroundColor: "#ffffff",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              flexDirection: "column",
+              textAlign: matches ? "" : "center",
+            }}
           >
-            <h2>
-              Docs <span>-&gt;</span>
-            </h2>
-            <p>
-              Find in-depth information about Next.js features and&nbsp;API.
-            </p>
-          </a>
-
-          <a
-            href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
+            <h1
+              style={{
+                fontFamily: "Poppins",
+                color: "#5A413D",
+                fontWeight: "Bold",
+                fontSize: matches ? "81px" : "50px",
+              }}
+            >
+              Entendendo o<span style={{ color: "#F2BF72" }}> violão</span>
+            </h1>
+            <img
+              src={"/entendendo.svg"}
+              width={"80%"}
+              // height={"100vh"}
+              alt={"vamos começar"}
+            />
+          </Box>
+          <Box
+            sx={{
+              width: "100vw",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              mt: 10,
+              backgroundColor: "#5A413D",
+            }}
           >
-            <h2>
-              Learn <span>-&gt;</span>
-            </h2>
-            <p>
-              Learn about Next.js in an interactive course with&nbsp;quizzes!
-            </p>
-          </a>
+            <Box
+              sx={{
+                width: matches ? "70%" : "90%",
 
-          <a
-            href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
+                backgroundColor: "#5A413D",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
+              <Understanding />
+            </Box>
+          </Box>
+          <Box
+            sx={{
+              width: matches ? "70%" : "90%",
+              mt: matches ? 20 : 14,
+            }}
           >
-            <h2>
-              Templates <span>-&gt;</span>
-            </h2>
-            <p>
-              Discover and deploy boilerplate example Next.js&nbsp;projects.
-            </p>
-          </a>
+            <Chords />
+          </Box>
+          <Box
+            sx={{
+              width: "100vw",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              mt: 10,
+              backgroundColor: "#5A413D",
+            }}
+          >
+            <Box
+              sx={{
+                width: matches ? "80%" : "90%",
 
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2>
-              Deploy <span>-&gt;</span>
-            </h2>
-            <p>
-              Instantly deploy your Next.js site to a shareable URL
-              with&nbsp;Vercel.
-            </p>
-          </a>
-        </div>
-      </main>
+                backgroundColor: "#5A413D",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                flexDirection: "column",
+              }}
+            >
+              <Box sx={{ textAlign: "center" }}>
+                <h1
+                  style={{
+                    fontFamily: "Poppins",
+                    color: "#F2BF72",
+                    fontWeight: "Bold",
+                    fontSize: matches ? "50px" : "61px",
+                  }}
+                >
+                  Principais Acordes
+                </h1>
+                <h6
+                  style={{
+                    fontFamily: "Poppins",
+                    color: "#F2BF72",
+                    fontWeight: "Bold",
+                    fontSize: matches ? "27px" : "30px",
+                  }}
+                >
+                  Clique para ouvir os sons!
+                </h6>
+              </Box>
+              <AllChords />
+            </Box>
+          </Box>
+        </Box>
+      </Box>
     </>
   );
 }
