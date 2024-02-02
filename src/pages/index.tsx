@@ -129,6 +129,7 @@ export default function Home() {
             }}
           >
             <Box
+              id={"teoria"}
               sx={{
                 width: matches ? "70%" : "90%",
 
@@ -170,7 +171,7 @@ export default function Home() {
                 flexDirection: "column",
               }}
             >
-              <Box sx={{ textAlign: "center" }}>
+              <Box id={"acordes"} sx={{ textAlign: "center" }}>
                 <h1
                   style={{
                     fontFamily: "Poppins",

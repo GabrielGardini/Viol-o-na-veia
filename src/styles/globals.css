@@ -53,3 +53,11 @@ body{
   /* display: inline-block; */
   animation: flipAnimation 3s ease-in-out infinite;
 }
+
+.acorde {
+  transition: transform 0.3s ease-in-out;
+}
+
+.acorde:hover {
+  transform: scale(1.1);
+}

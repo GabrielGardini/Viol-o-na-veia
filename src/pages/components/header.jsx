@@ -22,8 +22,8 @@ import {
 import { Settings } from "@mui/icons-material";
 
 const pages = [
-  { title: "Teoria", route: "#experience", target: "" },
-  { title: "Acordes", route: "#projects", target: "" },
+  { title: "Teoria", route: "#teoria", target: "" },
+  { title: "Acordes", route: "#acordes", target: "" },
   {
     title: "Sobre",
     route: "https://www.linkedin.com/in/gabrielgardini/",
