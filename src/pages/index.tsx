@@ -56,6 +56,7 @@ export default function Home() {
               display: "flex",
               justifyContent: "center",
               alignItems: "center",
+              fontFamily: "Poppins",
             }}
           >
             <img

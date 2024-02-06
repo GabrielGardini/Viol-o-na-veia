@@ -20,6 +20,24 @@
 body{
   margin:0;
   overflow-x: hidden;
+
+}
+html{
+  scroll-behavior: smooth;
+  /* scrollbar-color: #5A413D; */
+  
+
+}
+
+html::-webkit-scrollbar {
+  width: 9px;
+  /* background-color: #F2BF72; */
+  border-radius: 10px;
+}
+
+html::-webkit-scrollbar-thumb {
+  background-color: #F2BF72;
+  /* border-radius: 10px; */
 }
 
 .links {

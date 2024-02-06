@@ -56,6 +56,7 @@ const Header = () => {
     fontSize: 24,
     textDecoration: "none",
     margin: 30,
+    cursor: "pointer",
   };
   const box1 = {
     flexGrow: 1,
@@ -80,6 +81,7 @@ const Header = () => {
     textDecoration: "none",
     color: "black",
     fontFamily: "Poppins",
+    scrollBehavior: "smooth",
   };
 
   const [anchorElNav, setAnchorElNav] = useState(null);
@@ -159,6 +161,7 @@ const Header = () => {
                   <div fontFamily={"Poppins"} key={index}>
                     <Typography textAlign="center">
                       <a
+                        scrollBehavior={"smooth"}
                         className={"links"}
                         href={page.route}
                         target={page.target}
