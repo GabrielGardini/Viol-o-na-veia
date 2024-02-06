@@ -105,7 +105,7 @@ const Chords = () => {
           >
             Por último, existe a pestana, que é quando você usa o dedo indicador
             para fazer uma barra e apertar várias cordas ao mesmo tempo. Por
-            exemplo no acordes B, Bm, F e Gm
+            exemplo no acordes B, Bm, F e Gm.
           </p>
         </Grid>
         <Grid

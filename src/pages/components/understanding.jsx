@@ -69,7 +69,7 @@ const Understanding = () => {
             }}
           >
             Quando vamos fazer um acorde no violão, precisamos apertar as cordas
-            certas nas casas certas para termos o som que desejamos
+            certas nas casas certas para termos o som que desejamos.
           </p>
         </Grid>
         <Grid
@@ -123,7 +123,7 @@ const Understanding = () => {
               fontSize: matches ? "27px" : "30px",
             }}
           >
-            Para fazermos um acorde tocamos duas ou mais cordas juntas
+            Para fazermos um acorde tocamos duas ou mais cordas juntas.
           </p>
         </Grid>
       </Grid>

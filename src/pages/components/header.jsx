@@ -25,7 +25,7 @@ const pages = [
   { title: "Teoria", route: "#teoria", target: "" },
   { title: "Acordes", route: "#acordes", target: "" },
   {
-    title: "Sobre",
+    title: "Sobre Mim",
     route: "https://www.linkedin.com/in/gabrielgardini/",
     target: "blank",
   },

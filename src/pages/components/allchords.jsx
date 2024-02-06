@@ -11,35 +11,15 @@ const AllChords = () => {
   const matches = useMediaQuery("(max-width:900px)");
 
   const playA = () => {
-    // const sound = new Howl({
-    //   src: ["a.mp3", "D.mp3"],
-    //   volume: 0.2,
-    // });
-    // sound.play();
-
-    const sound1 = new Howl({
-      src: ["a.mp3"],
-      volume: 0.2,
-      rate: 2,
+    const sound = new Howl({
+      src: ["A.mp3"],
     });
-
-    const sound2 = new Howl({
-      src: ["D.mp3"],
-      volume: 0.2,
-      rate: 1.5,
-    });
-
-    sound1.play();
-
-    sound1.on("end", () => {
-      sound2.play();
-    });
+    sound.play();
   };
 
   const playAm = () => {
     const sound = new Howl({
       src: ["Am.mp3"],
-      volume: 0.2,
     });
     sound.play();
   };
@@ -47,7 +27,68 @@ const AllChords = () => {
   const playB = () => {
     const sound = new Howl({
       src: ["B.mp3"],
-      volume: 0.2,
+    });
+    sound.play();
+  };
+
+  const playBm = () => {
+    const sound = new Howl({
+      src: ["Bm.mp3"],
+    });
+    sound.play();
+  };
+
+  const playC = () => {
+    const sound = new Howl({
+      src: ["C.mp3"],
+    });
+    sound.play();
+  };
+
+  const playD = () => {
+    const sound = new Howl({
+      src: ["D.mp3"],
+    });
+    sound.play();
+  };
+  const playDm = () => {
+    const sound = new Howl({
+      src: ["Dm.mp3"],
+    });
+    sound.play();
+  };
+
+  const playE = () => {
+    const sound = new Howl({
+      src: ["E.mp3"],
+    });
+    sound.play();
+  };
+
+  const playEm = () => {
+    const sound = new Howl({
+      src: ["Em.mp3"],
+    });
+    sound.play();
+  };
+
+  const playF = () => {
+    const sound = new Howl({
+      src: ["F.mp3"],
+    });
+    sound.play();
+  };
+
+  const playG = () => {
+    const sound = new Howl({
+      src: ["G.mp3"],
+    });
+    sound.play();
+  };
+
+  const playGm = () => {
+    const sound = new Howl({
+      src: ["Gm.mp3"],
     });
     sound.play();
   };
@@ -101,6 +142,7 @@ const AllChords = () => {
           }}
         >
           <img
+            onClick={() => playB()}
             style={{ cursor: "pointer", margin: matches ? 15 : 30 }}
             class="acorde"
             src="/b.svg"
@@ -108,6 +150,7 @@ const AllChords = () => {
             width={matches ? "150px" : "169px"}
           ></img>
           <img
+            onClick={() => playBm()}
             style={{ cursor: "pointer", margin: matches ? 15 : 30 }}
             class="acorde"
             src="/bm.svg"
@@ -136,6 +179,7 @@ const AllChords = () => {
           }}
         >
           <img
+            onClick={() => playC()}
             style={{ cursor: "pointer", margin: matches ? 15 : 30 }}
             class="acorde"
             src="/c.svg"
@@ -143,6 +187,7 @@ const AllChords = () => {
             width={matches ? "150px" : "169px"}
           ></img>
           <img
+            onClick={() => playD()}
             style={{ cursor: "pointer", margin: matches ? 15 : 30 }}
             class="acorde"
             src="/d.svg"
@@ -161,6 +206,7 @@ const AllChords = () => {
           }}
         >
           <img
+            onClick={() => playDm()}
             style={{ cursor: "pointer", margin: matches ? 15 : 30 }}
             class="acorde"
             src="/dm.svg"
@@ -168,6 +214,7 @@ const AllChords = () => {
             width={matches ? "150px" : "169px"}
           ></img>
           <img
+            onClick={() => playE()}
             style={{ cursor: "pointer", margin: matches ? 15 : 30 }}
             class="acorde"
             src="/e.svg"
@@ -196,6 +243,7 @@ const AllChords = () => {
           }}
         >
           <img
+            onClick={() => playEm()}
             style={{ cursor: "pointer", margin: matches ? 15 : 30 }}
             class="acorde"
             src="/em.svg"
@@ -203,6 +251,7 @@ const AllChords = () => {
             width={matches ? "150px" : "169px"}
           ></img>
           <img
+            onClick={() => playF()}
             style={{ cursor: "pointer", margin: matches ? 15 : 30 }}
             class="acorde"
             src="/f.svg"
@@ -221,6 +270,7 @@ const AllChords = () => {
           }}
         >
           <img
+            onClick={() => playG()}
             style={{ cursor: "pointer", margin: matches ? 15 : 30 }}
             class="acorde"
             src="/g.svg"
