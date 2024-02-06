@@ -1,9 +1,13 @@
-import { Box, Grid, Typography, useMediaQuery } from "@mui/material";
+import { Box, Button, Grid, Typography, useMediaQuery } from "@mui/material";
 import Image from "next/image";
 import React from "react";
 
 const FirstSong = () => {
   const matches = useMediaQuery("(max-width:900px)");
+
+  const goToSong = () => {
+    window.open("https://www.youtube.com/watch?v=N4bFqW_eu2I", "_blank");
+  };
 
   return (
     <>
@@ -81,6 +85,7 @@ const FirstSong = () => {
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
+            flexDirection: "column",
           }}
         >
           <Image
@@ -90,6 +95,18 @@ const FirstSong = () => {
             width={matches ? 305 : 457}
             height={matches ? 246 : 367}
           ></Image>
+          <Button
+            sx={{
+              mt: 4,
+              mb: 4,
+              bgcolor: "#5A413D",
+              ":hover": { bgcolor: "#F2BF72" },
+            }}
+            onClick={() => goToSong()}
+            variant="contained"
+          >
+            Escute Aqui!
+          </Button>
         </Grid>
       </Grid>
     </>
